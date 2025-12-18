@@ -31,7 +31,7 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
     appType: 'webAppLinux'
-    WebAppName: 'centralusssss'
+    WebAppName: 'centraluuuuuuuuuuuus'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     DeploymentTypeLinux: 'ZipDeploy'
 
