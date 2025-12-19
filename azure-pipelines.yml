@@ -22,18 +22,20 @@ steps:
 
 
 
-
-
-
-
 - task: AzureRmWebAppDeployment@5
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
-    appType: 'webAppLinux'
-    WebAppName: 'centraluuuuuuuuuuuus'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    DeploymentTypeLinux: 'ZipDeploy'
+    appType: 'webApp'
+    WebAppName: 'centralussssssssss'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'centralus'
+    SlotName: 'production'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/static.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'zipDeploy'
+
+
 
 
 
