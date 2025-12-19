@@ -51,7 +51,7 @@ steps:
     SlotName: 'staging'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/static.zip'
     enableCustomDeployment: true
-    DeploymentType: 'zipDeploy'
+    DeploymentType: 'zipDeploy1'
 
 
 
