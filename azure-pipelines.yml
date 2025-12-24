@@ -21,6 +21,21 @@ steps:
 
 
 
+- task: AzureFunctionApp@2
+  inputs:
+    connectedServiceNameARM: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
+    appType: 'functionAppLinux'
+    appName: 'nuthanprasad'
+    package: '$(Build.ArtifactStagingDirectory)/static.zip'
+    runtimeStack: 'JAVA|8'
+    deploymentMethod: 'zipDeploy'
+
+
+
+
+
+
+
 
 - task: AzureRmWebAppDeployment@5
   inputs:
