@@ -11,24 +11,6 @@ pool:
 
 steps:
   
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/static.zip'
-    replaceExistingArchive: true
-
-
-
-- task: AzureFunctionApp@2
-  inputs:
-    connectedServiceNameARM: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
-    appType: 'functionAppLinux'
-    appName: 'nuthanprasad'
-    package: '$(Build.ArtifactStagingDirectory)/static.zip'
-    runtimeStack: 'JAVA|8'
-    deploymentMethod: 'zipDeploy'
 
 
 
@@ -37,37 +19,11 @@ steps:
 
 
 
-- task: AzureRmWebAppDeployment@5
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
-    appType: 'webApp'
-    WebAppName: 'centralussssssssss'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'centralus'
-    SlotName: 'production'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/static.zip'
-    enableCustomDeployment: true
-    DeploymentType: 'zipDeploy'
 
 
 
 
-
-
-- task: AzureRmWebAppDeployment@5
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
-    appType: 'webApp'
-    WebAppName: 'centralussssssssss'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'centralus'
-    SlotName: 'staging'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/static.zip'
-    enableCustomDeployment: true
-    DeploymentType: 'zipDeploy1'
-
+  
 
 
 
