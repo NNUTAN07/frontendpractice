@@ -10,6 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(1)(a718d2ec-92b4-46c5-b6d3-be045fe8dca2)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'echo "this is main"'
   
 
 
